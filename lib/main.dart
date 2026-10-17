@@ -1,16 +1,20 @@
+import 'package:fastest_path/core/theme.dart';
+import 'package:fastest_path/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const new({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: 'Fastest path',
+      theme: AppTheme.lightTheme(),
+      home: const HomeScreen(),
     );
   }
 }
